@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="350dp"
+    android:background="@drawable/dialog_bg_shape"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/biaoqing_img"
+        android:layout_width="100dp"
+        android:layout_height="134dp"
+        android:src="@mipmap/dao" />
+
+    <TextView
+        android:id="@+id/dialog_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="到"
+        android:textColor="@android:color/black"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/dialog_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="打卡成功"
+        android:textColor="@android:color/black"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/dialog_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:text="养成学习好习惯,树立时间观念,不迟到不早退"
+        android:textColor="@android:color/black"
+        android:visibility="visible" />
+
+</LinearLayout>

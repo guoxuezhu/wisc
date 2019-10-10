@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:don="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43b4ee"
+    tools:context=".libraryui.main.LibraryMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bluebg"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorwhite" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_banhui_library"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:src="@mipmap/class_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/classroom_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图书馆"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="100sp" />
+
+                    <TextView
+                        android:id="@+id/eg_classroom_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Library"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="58sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/duqukahao_et"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="100dp"-->
+            <!--android:hint="读取卡号" />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorwhite" />
+
+        <RelativeLayout
+            android:id="@+id/RL_notice_content_two_library"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="38dp"
+            android:background="@color/zuopinbg"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"
+                android:background="@color/colorwhite">
+
+                <include layout="@layout/notice_content_one" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="910dp"
+            android:layout_marginTop="38dp"
+            android:background="@color/zuopinbg"
+            android:visibility="visible">
+            <include layout="@layout/library_show"/>
+
+            <RelativeLayout
+                android:id="@+id/RL_notice_library"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="34dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="34dp"
+                android:background="@color/colorwhite"
+                android:visibility="gone">
+
+                <include layout="@layout/notice_layout" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RL_notice_content_library"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="34dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="34dp"
+                android:background="@color/colorwhite"
+                android:visibility="gone">
+
+                <include layout="@layout/notice_content_two" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LL3_library"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dibubg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="310dp"
+                android:layout_height="300dp"
+                android:background="@color/colorwhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.zhqz.wisc.ui.view.MyClockView
+                        android:id="@+id/clockView_library"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/yuanjiao_bg_shape"
+                        android:padding="12dp"
+                        don:circle_color="#bd292f34"
+                        don:draw_center_circle="true"
+                        don:hour_color="@android:color/white"
+                        don:minute_color="@android:color/white"
+                        don:minute_mark_color="@android:color/white"
+                        don:quarter_mark_color="@android:color/black"
+                        don:second_color="@android:color/holo_red_light" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/tv_date_library"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_time_library"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="26sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_nongli_library"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/tianqibg"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/tv_temperature_library"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="24°C"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="30sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:id="@+id/tv_wind_library"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="风向"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_air_quality_library"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="优"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/image_weather_library"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:src="@mipmap/image_00" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_weather_library"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="晴"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LL_notice_library"
+                android:layout_width="310dp"
+                android:layout_height="300dp"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:background="@color/colorwhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/notice_item" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/select_button_library"
+                android:layout_width="310dp"
+                android:layout_height="300dp"
+                android:background="@color/colorwhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/select_buttons" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

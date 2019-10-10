@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dp"
+    android:layout_height="1000dp"
+    android:background="@drawable/kaoqin_chakan_shape"
+    android:orientation="vertical">
+
+    <include layout="@layout/dialog_top_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/distance_20">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_2"
+            android:background="#FFFFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_66"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/distance_2"
+                android:layout_height="match_parent"
+                android:background="#FFFFFFFF" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="@color/kaoqingText"
+                android:textSize="@dimen/text_size_24" />
+
+            <View
+                android:layout_width="@dimen/distance_2"
+                android:layout_height="match_parent"
+                android:background="#FFFFFFFF" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="请假时间"
+                android:textColor="@color/kaoqingText"
+                android:textSize="@dimen/text_size_24" />
+
+            <View
+                android:layout_width="@dimen/distance_2"
+                android:layout_height="match_parent"
+                android:background="#FFFFFFFF" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="请假类型"
+                android:textColor="@color/kaoqingText"
+                android:textSize="@dimen/text_size_24" />
+
+            <View
+                android:layout_width="@dimen/distance_2"
+                android:layout_height="match_parent"
+                android:background="#FFFFFFFF" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态"
+                android:textColor="@color/kaoqingText"
+                android:textSize="@dimen/text_size_24" />
+
+            <View
+                android:layout_width="@dimen/distance_2"
+                android:layout_height="match_parent"
+                android:background="#FFFFFFFF" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_2"
+            android:background="#FFFFFFFF" />
+
+
+        <LinearLayout
+            android:id="@+id/leave_LL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/leave_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:scrollbars="none">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/leave_nodata_de"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:src="@mipmap/dao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="无请假数据"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请假时间:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="开始时间："
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/leave_date_start_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Textleave_date_start"
+                        style="@style/loginTextEdit"
+                        android:layout_width="200dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/login_edit_bg"
+                        android:drawableRight="@mipmap/rili"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="2017-12-02"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/start_spinner"
+                        style="@style/spinner_style"
+                        android:layout_width="200dp"
+                        android:layout_height="34dp"
+                        android:background="@mipmap/selectback"
+                        android:dropDownVerticalOffset="33dp"
+                        android:dropDownWidth="200dp"
+                        android:gravity="center_vertical"
+                        android:popupBackground="#fff" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="结束时间："
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/leave_date_end_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Textleave_date_end"
+                        style="@style/loginTextEdit"
+                        android:layout_width="200dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/login_edit_bg"
+                        android:drawableRight="@mipmap/rili"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="2017-12-02"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/end_spinner"
+                        style="@style/spinner_style"
+                        android:layout_width="200dp"
+                        android:layout_height="34dp"
+                        android:background="@mipmap/selectback"
+                        android:dropDownVerticalOffset="33dp"
+                        android:dropDownWidth="200dp"
+                        android:gravity="center_vertical"
+                        android:popupBackground="#fff" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="请假类型："
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/Spinner_Reason"
+                        style="@style/spinner_style"
+                        android:layout_width="200dp"
+                        android:layout_height="34dp"
+                        android:background="@mipmap/selectback"
+                        android:dropDownVerticalOffset="33dp"
+                        android:dropDownWidth="200dp"
+                        android:gravity="center_vertical"
+                        android:popupBackground="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sure"
+                        style="@style/loginTextEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/login_button_bg"
+                        android:text="提交"
+                        android:textColor="#fff" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

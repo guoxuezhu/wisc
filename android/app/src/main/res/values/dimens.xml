@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- 字体大小 -->
+
+
+
+    <!-- 距离 -->
+    <dimen name="distance_2">2dp</dimen>
+    <dimen name="distance_20">20dp</dimen>
+    <dimen name="distance_65">65dp</dimen>
+    <dimen name="distance_66">66dp</dimen>
+    <dimen name="distance_68">68dp</dimen>
+    <dimen name="distance_800">800dp</dimen>
+
+
+
+</resources>

@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'wisc-release'
+            keyPassword 'wisczhonghang'
+            storeFile file('../key/wisc.jks')
+            storePassword 'zhonghangwisc'
+            archivesBaseName = "wisc"
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.zhqz.wisc"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 10
+        versionName "2.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "serial_port"
+        }
+
+        sourceSets.main {
+            jniLibs.srcDir 'src/main/libs'
+            jni.srcDirs = [] //disable automatic ndk-build call
+        }
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            buildConfigField 'boolean', 'JAVA_LOG_ENABLED', 'false'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            buildConfigField 'boolean', 'JAVA_LOG_ENABLED', 'true'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "wisc_${defaultConfig.versionName}.apk"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        lintConfig rootProject.file('gradle/lint.xml')
+        disable 'MissingTranslation'
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+    greendao {
+        schemaVersion 5
+        /**
+         * greendao输出dao的数据库操作实体类文件夹（相对路径 包名+自定义路径名称，包将创建于包名的直接路径下）
+         */
+        daoPackage 'com.zhqz.wisc.data.DbDao'
+        /**
+         * greenDao实体类包文件夹
+         */
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+    //Dagger2
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0.2'
+    implementation 'com.google.dagger:dagger:2.0.2'
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.4.0"
+    //RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    //Retrofit 2.0
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    implementation 'com.google.code.gson:gson:2.7'
+    //compile 'com.squareup.okio:okio:1.6.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.google.android.gms:play-services-appindexing:9.4.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.guava:guava:19.0'
+
+    //数据库//http://blog.csdn.net/axuanqq/article/details/51344299
+    implementation 'org.greenrobot:greendao:3.2.0'
+    //umeng
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    // Mqtt client : Eclipse Paho
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2'
+    //时钟
+    implementation 'com.don:clockviewlibrary:1.0.1'
+    //视频使用
+    implementation 'com.sprylab.android.texturevideoview:texturevideoview:1.2.1'
+    //农历
+    implementation 'com.github.XhinLiang:LunarCalendar:1.2.0'
+
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+
+    // 时间选择器 https://github.com/Bigkoo/Android-PickerView/wiki
+    implementation 'com.contrarywind:Android-PickerView:3.2.5'
+
+    implementation files('libs/Msc.jar')
+    implementation files('libs/Sunflower.jar')
+
+    //食堂菜单
+    implementation 'com.youth.banner:banner:1.4.9'
+    implementation 'com.zxy.android:recovery:0.0.8'
+}

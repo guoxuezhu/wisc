@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="152dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cabinet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="姓名"
+                    android:textColor="@color/chakanText"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/cabinet_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="启编号"
+                    android:textColor="@color/chakanText"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/cabinet_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="一层101"
+                    android:textColor="@color/chakanText"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/cabinet_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="启用"
+                    android:textColor="@color/chakanText"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cabinet_urgent"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/i_ope"
+                android:text="紧急开柜"
+                android:textColor="@color/colorwhite" />
+
+            <Button
+                android:id="@+id/cabinet_locking"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/i_ope"
+                android:text="锁定"
+                android:textColor="@color/colorwhite" />
+
+            <Button
+                android:id="@+id/cabinet_open"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/i_ope"
+                android:text="解锁"
+                android:textColor="@color/colorwhite" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorwhite" />
+</LinearLayout>

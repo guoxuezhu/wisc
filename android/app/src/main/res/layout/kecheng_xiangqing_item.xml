@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/distance_68"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_66"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/distance_2"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/jieci_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="节次"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <View
+            android:layout_width="@dimen/distance_2"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/kechengname_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="课程"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <View
+            android:layout_width="@dimen/distance_2"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/renkelaoshi_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="任课老师"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <View
+            android:layout_width="@dimen/distance_2"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/jiaoshi_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="教室"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <View
+            android:layout_width="@dimen/distance_2"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_2"
+        android:background="#FFFFFFFF" />
+</LinearLayout>

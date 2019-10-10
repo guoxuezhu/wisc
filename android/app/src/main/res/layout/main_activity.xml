@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:don="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bluebg"
+    android:orientation="vertical"
+    tools:context="com.zhqz.wisc.ui.main.MainActivity">
+
+    <include layout="@layout/appbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorwhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_banhui"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@mipmap/class_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/classroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高一（ 2 ）班"
+                    android:textColor="@android:color/white"
+                    android:textSize="100sp" />
+
+                <TextView
+                    android:id="@+id/eg_classroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class one, Grade ten"
+                    android:textColor="@android:color/white"
+                    android:textSize="58sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<EditText-->
+        <!--android:id="@+id/duqukahao_et"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:hint="读取卡号" />-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorwhite" />
+
+    <RelativeLayout
+        android:id="@+id/RL_notice_content_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="38dp"
+        android:background="@color/zuopinbg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"
+            android:background="@color/colorwhite">
+
+            <include layout="@layout/notice_content_one" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_layout"
+        android:layout_width="match_parent"
+        android:layout_height="910dp"
+        android:layout_marginTop="38dp"
+        android:background="@color/zuopinbg">
+
+
+        <RelativeLayout
+            android:id="@+id/RL2"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="34dp">
+
+            <include layout="@layout/kecheng_time_all" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/RL3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/RL2"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent">
+
+            <include layout="@layout/list_banner" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_notice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="34dp"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <include layout="@layout/notice_layout" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="34dp"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <include layout="@layout/notice_content_two" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LL3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dibubg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="300dp"
+            android:background="@color/tianqibg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_weather"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:src="@mipmap/image_00" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="晴"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="24°C"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_wind"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="风向"
+                android:textColor="@color/colorwhite"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="空气质量指数："
+                    android:textColor="@color/colorwhite"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="33 "
+                    android:textColor="@color/colorwhite"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tv_air_quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="优"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL_notice"
+            android:layout_width="310dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@color/colorwhite"
+            android:orientation="vertical">
+
+            <include layout="@layout/notice_item" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_button"
+            android:layout_width="310dp"
+            android:layout_height="300dp"
+            android:background="@color/colorwhite"
+            android:orientation="vertical">
+
+            <include layout="@layout/select_buttons" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bind"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/titleColor"
+        android:gravity="center"
+        android:text="绑 定 食 堂"
+        android:textColor="@color/colorwhite"
+        android:textSize="40sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@mipmap/bind_bg1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/canting_lv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none">
+
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bind_bt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/titleColor"
+        android:gravity="center"
+        android:text="确 定"
+        android:textColor="@color/colorwhite"
+        android:textSize="40sp" />
+</LinearLayout>

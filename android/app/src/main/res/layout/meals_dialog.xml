@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dp"
+    android:layout_height="1000dp"
+    android:background="@drawable/kaoqin_chakan_shape"
+    android:orientation="vertical">
+
+    <include layout="@layout/dialog_top_bar"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_65"
+        android:gravity="center"
+        android:text="本月餐费清单"
+        android:textColor="@color/kaoqingText"
+        android:textSize="30sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/distance_20"
+        android:paddingLeft="@dimen/distance_20"
+        android:paddingRight="@dimen/distance_20">
+
+        <TextView
+            android:id="@+id/meals_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="总次数150次"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <include layout="@layout/meals_counts"></include>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="清单详情"
+            android:textColor="@color/kaoqingText"
+            android:textSize="@dimen/text_size_24" />
+
+        <LinearLayout
+            android:id="@+id/meals_LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_2"
+                android:background="#FFFFFFFF" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/meals_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:scrollbars="none">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nodata_de"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:src="@mipmap/dao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="无消费记录"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

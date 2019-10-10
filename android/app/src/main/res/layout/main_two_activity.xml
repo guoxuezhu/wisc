@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:don="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43b4ee"
+    tools:context="com.zhqz.wisc.ui.main.MainActivity">
+
+    <include layout="@layout/main_activity" />
+
+    <FrameLayout
+        android:id="@+id/course_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#50000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#20d9f5" />
+
+            <com.zhqz.wisc.ui.view.MyTextView
+                android:id="@+id/course_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="1跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容跑马灯内容2"
+                android:textColor="@color/colorwhite"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

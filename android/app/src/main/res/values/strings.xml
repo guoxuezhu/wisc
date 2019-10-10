@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">智能班牌</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="count">次</string>
+    <string name="Surplus">剩余: </string>
+    <string name="use_count">已用: </string>
+    <string name="dinner_count">晚餐: </string>
+    <string name="lunch_count">午餐: </string>
+    <string name="breakfast_count">早餐: </string>
+    <string name="meals_counts">已用总次数 </string>
+    <string name="no_power">您没有读/写串口的权限 </string>
+    <string name="no_open">由于未知原因，无法打开串口 </string>
+    <string name="configure_seri">请先配置你的串口 </string>
+    <string name="no_course">此教室没有课程 </string>
+    <string name="no_data">无数据 </string>
+    <string name="meals_failure">余额查询失败 </string>
+
+
+    <string name="high_school">北 京 市 第 五 中 学 </string>
+    <string name="high_school_eng">Beijing NO.5 high school</string>
+    <string name="bind_rooms">     绑 定 教 室     </string>
+
+    <string name="no_select_room">你没有选择教室</string>
+    <string name="no_find_roomlist">没有发现教室列表</string>
+
+    <string name="bind_roomfailure">绑定教室失败,联系后台管理员</string>
+    <string name="bind_roomsuccess">绑定教室成功</string>
+    <string name="bind_repeat">此班级已被其它班牌绑定,请选择其它班级</string>
+
+    <string name="meidaka">没打卡</string>
+    <string name="dao">到</string>
+    <string name="chidao">迟到</string>
+    <string name="queqin">缺勤</string>
+    <string name="qingjia">请假</string>
+
+
+
+
+
+    <string name="app_id">5aa5dfde</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+
+    <string name="pref_key_translate">translate</string>
+    <string name="pref_title_translate">翻译</string>
+
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>en_us</item>
+    </string-array>
+
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>
